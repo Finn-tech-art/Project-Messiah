@@ -1,0 +1,39 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "project-messiah"
+version = "0.1.0"
+description = "Local scoped-work delivery engine for qualifying, estimating, planning, and reviewing small high-value jobs."
+requires-python = ">=3.11"
+dependencies = [
+  "langgraph>=0.3.0",
+  "groq>=0.21.0",
+  "pyside6>=6.8.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.4.0",
+  "ruff>=0.11.0",
+]
+
+[project.scripts]
+messiah = "messiah.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/messiah"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
