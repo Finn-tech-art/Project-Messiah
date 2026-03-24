@@ -12,7 +12,7 @@ import json
 from pathlib import Path
 from typing import Any, Iterable
 
-from .models import (
+from messiah.models import (
     AcceptanceCriterion,
     Deliverable,
     EvidenceItem,

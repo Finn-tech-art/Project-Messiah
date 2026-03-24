@@ -8,7 +8,7 @@
 
 from __future__ import annotations
 
-from .models import (
+from messiah.models import (
     AcceptanceCriterion,
     Deliverable,
     EvidenceItem,

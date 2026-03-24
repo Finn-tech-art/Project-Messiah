@@ -28,7 +28,7 @@ from PySide6.QtWidgets import (
     QWidget,
 )
 
-from .models import MessiahState
+from messiah.models import MessiahState
 
 
 def _join_lines(values: Iterable[str], empty: str = "None") -> str:

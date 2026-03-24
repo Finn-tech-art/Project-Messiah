@@ -13,7 +13,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Any, Callable, Mapping, TypeAlias, cast
 
-from .models import ApprovalDecision, JobStatus, MessiahState
+from messiah.models import ApprovalDecision, JobStatus, MessiahState
 
 try:
     from langgraph.graph import END as LANGGRAPH_END
